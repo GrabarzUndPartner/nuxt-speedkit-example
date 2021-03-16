@@ -6,6 +6,7 @@
     <SpeedkitPicture/>
     <DirectiveVFontB></DirectiveVFontB>
     <ExperimentalSpeedkitPicture/>
+    <SpeedkitIframe/>
   </div>
 </template>
 
@@ -18,7 +19,8 @@ export default {
     DirectiveVFontA: () => import('@/components/DirectiveVFontA'),
     DirectiveVFontB: () => import('@/components/DirectiveVFontB'),
     SpeedkitPicture: () => import('@/components/SpeedkitPicture'),
-    ExperimentalSpeedkitPicture: () => import('@/components/ExperimentalSpeedkitPicture')
+    ExperimentalSpeedkitPicture: () => import('@/components/ExperimentalSpeedkitPicture'),
+    SpeedkitIframe: () => import('@/components/SpeedkitIframe')
   }
 };
 
