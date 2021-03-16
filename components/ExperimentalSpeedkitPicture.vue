@@ -16,10 +16,10 @@ export default {
     return {
       picture: {
         sources: [
-          { src: 'https://nuxt-speedkit.grabarzundpartner.dev/example/img/image-content-1/landscape.jpg', sizes: '1024:1024,1280:1280,1680:1680,1920:1920' },
-          { src: 'https://nuxt-speedkit.grabarzundpartner.dev/example/img/image-content-1/portrait.jpg', sizes: '768:768' },
-          { src: 'https://nuxt-speedkit.grabarzundpartner.dev/example/img/image-content-1/landscape.jpg', sizes: '576:576' },
-          { src: 'https://nuxt-speedkit.grabarzundpartner.dev/example/img/image-content-1/portrait.jpg', sizes: '414' }
+          { src: 'https://grabarzundpartner.github.io/nuxt-speedkit-example/img/dark/1920.jpg', sizes: '1024:1024,1280:1280,1680:1680,1920:1920' },
+          { src: 'https://grabarzundpartner.github.io/nuxt-speedkit-example/img/dark/768.jpg', sizes: '768:768' },
+          { src: 'https://grabarzundpartner.github.io/nuxt-speedkit-example/img/dark/1920.jpg', sizes: '576:576' },
+          { src: 'https://grabarzundpartner.github.io/nuxt-speedkit-example/img/dark/768.jpg', sizes: '414' }
         ]
       }
     };
