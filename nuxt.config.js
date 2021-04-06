@@ -4,12 +4,28 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  server: {
+    host: getHost(),
+    port: getPort()
+  },
+
+  build: {
+    transpile: ['@nuxt/image', 'image-meta'],
+
+    postcss: {
+      plugins: {
+        'postcss-object-fit-images': {}
+      }
+    }
+
+  },
+
   generate: {
     dir: process.env.DIST_PATH
   },
 
   router: {
-    base: process.env.BASE_URL
+    base: getBasePath()
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -172,6 +188,41 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     'nuxt-speedkit',
+    [
+      'nuxt-polyfill', {
+        features: [
+          {
+            require: 'object-fit-images',
+            detect: () => 'objectFit' in document.documentElement.style,
+            install: objectFitImages => (window.objectFitImages = objectFitImages)
+          },
+          {
+            require: 'picturefill',
+            detect: () => 'HTMLPictureElement' in window || 'picturefill' in window
+          },
+          {
+            require: 'picturefill/dist/plugins/mutation/pf.mutation.js',
+            detect: () => 'HTMLPictureElement' in window || 'picturefill' in window
+          },
+          {
+            require: 'intersection-observer',
+            detect: () => 'IntersectionObserver' in window
+          }
+        ]
+      }
+    ]
   ]
 
+}
+
+function getBasePath () {
+  return process.env.npm_config_base || process.env.BASE_PATH || '/';
+}
+
+function getHost () {
+  return process.env.npm_config_host || process.env.HOST || 'localhost';
+}
+
+function getPort () {
+  return process.env.npm_config_port || process.env.PORT || 3000;
 }

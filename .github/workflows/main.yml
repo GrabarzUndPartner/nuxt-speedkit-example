@@ -90,7 +90,7 @@ jobs:
           npm run generate
           touch dist/.nojekyll
         env:
-          BASE_URL: /nuxt-speedkit-example/
+          BASE_PATH: /nuxt-speedkit-example/
           DIST_PATH: dist
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
