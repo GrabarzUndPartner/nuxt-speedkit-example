@@ -55,7 +55,9 @@
         GitHub (Example)
       </a>
     </div>
-    <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.6 19.4l-2.8-2.8-9.2 9.2-9.2-9.2-2.8 2.8 12 12 12-12z" /><path d="M0 0h48v48H0V0z" fill="none" /></svg>
+    <div class="chevron">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M36.6 19.4l-2.8-2.8-9.2 9.2-9.2-9.2-2.8 2.8 12 12 12-12z" /><path d="M0 0h48v48H0V0z" fill="none" /></svg>
+    </div>
   </section>
 </template>
 
@@ -126,14 +128,29 @@ ul li {
 
 .chevron {
   position: absolute;
+  left: calc(50% - 128px / 2);
   bottom: 0;
   width: 128px;
-  fill: #e83162;
   animation-name: bounce-6;
   animation-duration: 1s;
   animation-timing-function: ease;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+}
+
+.chevron:before {
+  display: block;
+  padding-top: 100%;
+  content: "";
+}
+
+.chevron svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  fill: #e83162;
 }
 
 @keyframes bounce-6 {
