@@ -16,7 +16,6 @@
 <style scoped>
 .directive-v-font-b {
   display: block;
-  height: 1px;
 }
 
 .directive-v-font-b::before {
