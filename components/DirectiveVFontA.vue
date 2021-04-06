@@ -15,13 +15,19 @@
 
 <style scoped>
 .directive-v-font-a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: block;
+  height: 1px;
+}
+
+.directive-v-font-a::before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
 }
 
 p {
+  display: inline-block;
   margin: 40px 0;
   font-size: 32px;
 }
