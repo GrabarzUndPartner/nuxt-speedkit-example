@@ -38,6 +38,7 @@ html {
 section {
   position: relative;
   width: 100%;
+  height: 1px;
   min-height: 100vh;
   padding: 0 15px;
   margin: 20px 0;
