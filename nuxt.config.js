@@ -28,6 +28,10 @@ export default {
     base: getBasePath()
   },
 
+  plugins: [
+    { src: "@/plugins/polyfills.js", mode: "client" }
+  ],
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: pkg.name,
@@ -187,30 +191,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    'nuxt-speedkit',
-    [
-      'nuxt-polyfill', {
-        features: [
-          {
-            require: 'object-fit-images',
-            detect: () => 'objectFit' in document.documentElement.style,
-            install: objectFitImages => (window.objectFitImages = objectFitImages)
-          },
-          {
-            require: 'picturefill',
-            detect: () => 'HTMLPictureElement' in window || 'picturefill' in window
-          },
-          {
-            require: 'picturefill/dist/plugins/mutation/pf.mutation.js',
-            detect: () => 'HTMLPictureElement' in window || 'picturefill' in window
-          },
-          {
-            require: 'intersection-observer',
-            detect: () => 'IntersectionObserver' in window
-          }
-        ]
-      }
-    ]
+    'nuxt-speedkit'
   ]
 
 }
