@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.1](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.0...v1.0.1) (2021-04-07)
+
+
+### Bug Fixes
+
+* **ie11:** update nuxt-speedkit ([4d5d54c](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/4d5d54c9fb5cca5bc57fde8ef9d59abb702db1ce))
+
 # 1.0.0 (2021-04-06)
 
 
