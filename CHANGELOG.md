@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.3](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.2...v1.0.3) (2021-04-07)
+
+
+### Bug Fixes
+
+* **polyfills:** improve polyfill load ([fcf4f0f](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/fcf4f0f761410ed7592ef03898b2801a32f1a2c4))
+
 ## [1.0.2](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.1...v1.0.2) (2021-04-07)
 
 
