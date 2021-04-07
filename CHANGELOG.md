@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.2](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.1...v1.0.2) (2021-04-07)
+
+
+### Bug Fixes
+
+* **polyfills:** add plugin for polyfill; remove nuxt-polyfill ([d18dcd2](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/d18dcd2644f6b3ef485fd464ba0e1544d54c8b5c))
+
 ## [1.0.1](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.0...v1.0.1) (2021-04-07)
 
 
