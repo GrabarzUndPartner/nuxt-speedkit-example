@@ -136,7 +136,7 @@ ul {
     }
   }
 
-  li {
+  & li {
     padding: 0;
     margin: 10px 0;
     font-size: 18px;
