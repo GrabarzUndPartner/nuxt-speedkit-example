@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.5](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.4...v1.0.5) (2021-04-16)
+
+
+### Bug Fixes
+
+* **browserlist:** add browserlist ([c35a6c5](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/c35a6c51879f42d72fa5eb950d845eb433308ee2))
+
 ## [1.0.4](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.3...v1.0.4) (2021-04-16)
 
 
