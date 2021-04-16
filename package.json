@@ -10,7 +10,7 @@
     "test": "npm run lint",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:es": "eslint --ext .js,.vue .",
-    "lint:css": "stylelint \"examples/**/*.vue\" \"examples/**/*.css\""
+    "lint:css": "stylelint \"components/**/*.vue\" \"pages/**/*.vue\" \"layouts/**/*.vue\""
   },
   "dependencies": {
     "core-js": "3.10.0",
