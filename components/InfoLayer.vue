@@ -62,15 +62,15 @@ export default {
 };
 </script>
 
-<style lang="postcss" scoped>
->>> #nuxt-speedkit__speedkit-layer__content {
+<style lang="postcss">
+#nuxt-speedkit__speedkit-layer__content {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 25%);
+  background-color: rgb(0, 0, 0, 0.4);
   opacity: 0;
   animation-name: fade-in;
   animation-duration: 0.2s;
@@ -92,8 +92,11 @@ export default {
   }
 }
 
-.nuxt-speedkit__speedkit-layer--visible >>> #nuxt-speedkit__speedkit-layer__content {
-  animation-delay: initial;
+.nuxt-speedkit__speedkit-layer--visible #nuxt-speedkit__speedkit-layer__content {
+  &,
+  & > div {
+    animation-delay: initial;
+  }
 }
 
 .info_layer {
@@ -120,12 +123,20 @@ export default {
 }
 
 @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
   100% {
     opacity: 1;
   }
 }
 
 @keyframes fall-down {
+  0% {
+    transform: translateY(-100%);
+  }
+
   100% {
     transform: translateY(0%);
   }
