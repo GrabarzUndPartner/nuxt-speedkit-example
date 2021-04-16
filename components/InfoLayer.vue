@@ -19,18 +19,18 @@
         </li>
       </ul>
       <div class="info-layer__buttons">
-        <button class="button--primary" id="nuxt-speedkit__button__init-nojs">
+        <button id="nuxt-speedkit__button__init-nojs" class="button--primary">
           <label for="nuxt-speedkit__speedkit-layer__close">
             Continue without Javascript, but with activated fonts.
           </label>
         </button>
-        <button class="button--secondary" id="nuxt-speedkit__button__init-font" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
+        <button id="nuxt-speedkit__button__init-font" class="button--secondary" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
           <label for="nuxt-speedkit__speedkit-layer__close">
             Continue only with fonts
           </label>
         </button>
-        <button class="button--primary" id="nuxt-speedkit__button__init-app" onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
-            Continue with fully working app
+        <button id="nuxt-speedkit__button__init-app" class="button--primary" onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
+          Continue with fully working app
         </button>
       </div>
     </div>
@@ -54,7 +54,7 @@ export default {
   head () {
     return {
       noscript: [
-        getStyleDescription('.info-layer > div { animation-delay: initial !important; }', true)
+        getStyleDescription('#nuxt-speedkit__speedkit-layer__content { animation-delay: initial !important; } #nuxt-speedkit__speedkit-layer__content > div { animation-delay: initial !important; }', true)
       ],
       __dangerouslyDisableSanitizers: ['noscript']
     };
@@ -62,8 +62,8 @@ export default {
 };
 </script>
 
-<style>
-#nuxt-speedkit__speedkit-layer__content {
+<style lang="postcss" scoped>
+>>> #nuxt-speedkit__speedkit-layer__content {
   position: fixed;
   top: 0;
   left: 0;
@@ -74,45 +74,49 @@ export default {
   opacity: 0;
   animation-name: fade-in;
   animation-duration: 0.2s;
-  /* animation-delay: 3s; */
+  animation-delay: 4s;
   backdrop-filter: blur(calc(7 / 16 * 1em));
   animation-fill-mode: forwards;
-}
-#nuxt-speedkit__speedkit-layer__content  > div {
-  padding: 10px;
-  color: #e83162;
-  text-align: center;
-  background: #fff;
-  box-shadow: 0 0 calc(10 / 16 * 1em) rgb(0 0 0 / 60%);
-  transform: translateY(-100%);
-  animation-name: fall-down;
-  animation-duration: 0.2s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
+
+  & > div {
+    padding: 10px;
+    color: #e83162;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 0 calc(10 / 16 * 1em) rgb(0 0 0 / 60%);
+    transform: translateY(-100%);
+    animation-name: fall-down;
+    animation-duration: 0.2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+  }
 }
 
-.nuxt-speedkit__speedkit-layer--visible  >>> #nuxt-speedkit__speedkit-layer__content {
+.nuxt-speedkit__speedkit-layer--visible >>> #nuxt-speedkit__speedkit-layer__content {
   animation-delay: initial;
 }
 
-.info-layer label {
-  cursor: pointer;
-}
+.info_layer {
+  & label {
+    cursor: pointer;
+  }
 
-.info-layer ul {
-  padding: 0;
-  margin: 20px 0;
-}
+  & ul {
+    padding: 0;
+    margin: 20px 0;
+  }
 
-.info-layer ul > li {
-  display: none;
+  & ul > li {
+    display: none;
+  }
 }
 
 .info-layer__buttons {
   margin: calc(10 / 16 * 1em) 0;
-}
-.info-layer__buttons > * {
-  margin: 0 calc(5 / 16 * 1em);
+
+  & > * {
+    margin: 0 calc(5 / 16 * 1em);
+  }
 }
 
 @keyframes fade-in {

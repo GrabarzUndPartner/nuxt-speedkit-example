@@ -1,12 +1,12 @@
 <template>
   <div class="page">
     <!-- critical prop for critical components: https://nuxt-speedkit.grabarzundpartner.dev/usage#critical-prop-for-critical-components -->
-    <intro critical></intro>
-    <DirectiveVFontA></DirectiveVFontA>
-    <SpeedkitPicture/>
-    <DirectiveVFontB></DirectiveVFontB>
-    <ExperimentalSpeedkitPicture/>
-    <SpeedkitIframe/>
+    <intro critical />
+    <DirectiveVFontA />
+    <SpeedkitPicture />
+    <DirectiveVFontB />
+    <ExperimentalSpeedkitPicture />
+    <SpeedkitIframe />
   </div>
 </template>
 

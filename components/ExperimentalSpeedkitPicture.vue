@@ -28,16 +28,16 @@ export default {
 
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .experimental-speedkit-picture {
   position: relative;
-}
 
-.experimental-speedkit-picture .picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  & .picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>

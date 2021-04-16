@@ -13,16 +13,16 @@
   </section>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 .directive-v-font-b {
   display: block;
-}
 
-.directive-v-font-b::before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+  &::before {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    content: '';
+  }
 }
 
 p {

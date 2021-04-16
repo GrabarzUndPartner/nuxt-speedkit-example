@@ -13,10 +13,10 @@ import InfoLayer from '@/components/InfoLayer';
 
 export default {
   components: { InfoLayer }
-}
+};
 </script>
 
-<style>
+<style lang="postcss">
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -44,22 +44,23 @@ section {
   margin: 20px 0;
   text-align: center;
   background: #fff;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-section:first-child {
-  margin-top: 0;
-}
-
-section:last-child {
-  margin-bottom: 0;
-}
-
-.button--primary, .button--secondary {
-  appearance: none;
-  border:none;
-  background: none;
-  cursor: pointer;
+.button--primary,
+.button--secondary {
   font-size: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  appearance: none;
 }
 
 .button--primary {
@@ -69,15 +70,11 @@ section:last-child {
   text-decoration: none;
   border: 1px solid #e83162;
   border-radius: 4px;
-}
 
-.button--primary:hover {
-  color: #fff;
-  background-color: #e83162;
-}
-
-a {
-  color: #e83162;
+  &:hover {
+    color: #fff;
+    background-color: #e83162;
+  }
 }
 
 .button--secondary {
@@ -88,10 +85,15 @@ a {
   text-decoration: none;
   border: 1px solid #e83162;
   border-radius: 4px;
+
+  &:hover {
+    color: #fff;
+    background-color: #e83162;
+  }
 }
 
-.button--secondary:hover {
-  color: #fff;
-  background-color: #e83162;
+a {
+  color: #e83162;
 }
+
 </style>
