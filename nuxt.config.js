@@ -14,6 +14,7 @@ export default {
 
     postcss: {
       plugins: {
+        'postcss-nesting': {},
         'postcss-object-fit-images': {}
       }
     }
@@ -29,7 +30,7 @@ export default {
   },
 
   plugins: [
-    { src: "@/plugins/polyfills.js", mode: "client" }
+    { src: '@/plugins/polyfills.js', mode: 'client' }
   ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -189,12 +190,17 @@ export default {
     }]
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    '@nuxt/postcss8',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/stylelint-module'
+  ],
+
   modules: [
     'nuxt-speedkit'
   ]
 
-}
+};
 
 function getBasePath () {
   return process.env.npm_config_base || process.env.BASE_PATH || '/';

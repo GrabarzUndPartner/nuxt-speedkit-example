@@ -1,5 +1,4 @@
-async function polyfills(){
-
+async function polyfills () {
   if (!('IntersectionObserver' in global)) {
     await import('intersection-observer');
   }
@@ -12,7 +11,6 @@ async function polyfills(){
     await import('picturefill');
     await import('picturefill/dist/plugins/mutation/pf.mutation.js');
   }
-
 }
 
 polyfills();
