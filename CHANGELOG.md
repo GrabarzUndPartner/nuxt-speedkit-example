@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.4](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.3...v1.0.4) (2021-04-16)
+
+
+### Bug Fixes
+
+* **update:** add eslint, stylint and add postcss ([80ae693](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/80ae693b76f758a2a6127d7b8d6ec27c00547fff))
+
 ## [1.0.3](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.2...v1.0.3) (2021-04-07)
 
 
