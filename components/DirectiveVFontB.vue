@@ -13,6 +13,10 @@
   </section>
 </template>
 
+<script>
+export default {};
+</script>
+
 <style lang="postcss" scoped>
 .directive-v-font-b {
   display: block;
@@ -21,7 +25,7 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    content: '';
+    content: "";
   }
 }
 
