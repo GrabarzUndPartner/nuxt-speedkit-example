@@ -5,31 +5,31 @@
         Sorry, but you will have a limited user experience due to a…
       </p>
       <ul v-font="$getFont('Quicksand', 700, 'normal')">
-        <li id="nuxt-speedkit__message__nojs">
+        <li id="nuxt-speedkit-message-nojs">
           disabled javascript
         </li>
-        <li id="nuxt-speedkit__message__unsupported-browser">
+        <li id="nuxt-speedkit-message-unsupported-browser">
           outdated browser
         </li>
-        <li id="nuxt-speedkit__message__outdated-device">
+        <li id="nuxt-speedkit-message-outdated-device">
           outdated device
         </li>
-        <li id="nuxt-speedkit__message__slow-connection">
+        <li id="nuxt-speedkit-message-slow-connection">
           slow connection
         </li>
       </ul>
       <div class="info-layer-buttons">
-        <button id="nuxt-speedkit__button__init-nojs" class="button--primary">
-          <label for="nuxt-speedkit__speedkit-layer__close">
+        <button id="nuxt-speedkit-button-init-nojs" class="button-primary">
+          <label for="nuxt-speedkit-speedkit-layer-close">
             Continue without Javascript, but with activated fonts.
           </label>
         </button>
-        <button id="nuxt-speedkit__button__init-font" class="button--secondary" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
-          <label for="nuxt-speedkit__speedkit-layer__close">
+        <button id="nuxt-speedkit-button-init-font" class="button-secondary" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
+          <label for="nuxt-speedkit-speedkit-layer-close">
             Continue only with fonts
           </label>
         </button>
-        <button id="nuxt-speedkit__button__init-app" class="button--primary" onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
+        <button id="nuxt-speedkit-button-init-app" class="button-primary" onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
           Continue with fully working app
         </button>
       </div>
@@ -54,7 +54,7 @@ export default {
   head () {
     return {
       noscript: [
-        getStyleDescription('#nuxt-speedkit__speedkit-layer__content { animation-delay: initial !important; } #nuxt-speedkit__speedkit-layer__content > div { animation-delay: initial !important; }', true)
+        getStyleDescription('#nuxt-speedkit-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-speedkit-layer-content > div { animation-delay: initial !important; }', true)
       ],
       __dangerouslyDisableSanitizers: ['noscript']
     };
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="postcss">
-#nuxt-speedkit__speedkit-layer__content {
+#nuxt-speedkit-speedkit-layer-content {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,7 +92,7 @@ export default {
   }
 }
 
-.nuxt-speedkit__speedkit-layer--visible #nuxt-speedkit__speedkit-layer__content {
+.nuxt-speedkit-speedkit-layer-visible #nuxt-speedkit-speedkit-layer-content {
   &,
   & > div {
     animation-delay: initial;
