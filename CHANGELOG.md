@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.6](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.5...v1.0.6) (2022-02-09)
+
+
+### Bug Fixes
+
+* **update:** update deps; update eslint and stylelint ([0f00310](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/0f00310f77cacb92a13f68cf17257d04f948d838))
+
 ## [1.0.5](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.4...v1.0.5) (2021-04-16)
 
 
