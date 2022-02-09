@@ -21,7 +21,7 @@
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    content: '';
+    content: "";
   }
 }
 

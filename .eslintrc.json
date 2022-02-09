@@ -1,11 +1,9 @@
 {
   "root": true,
-  "env": {
-    "browser": true,
-    "node": true
-  },
   "parserOptions": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser",
+    "sourceType": "module",
+    "requireConfigFile": false
   },
   "extends": [
     "@nuxtjs",
@@ -13,6 +11,7 @@
   ],
   "plugins": [],
   "rules": {
+    "vue/multi-word-component-names": "off",
     "semi": [
       2,
       "always"

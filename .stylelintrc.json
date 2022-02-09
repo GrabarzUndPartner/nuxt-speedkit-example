@@ -3,18 +3,9 @@
     "stylelint-config-standard",
     "stylelint-config-recess-order"
   ],
+  "customSyntax": "postcss-html",
   "rules": {
-    "at-rule-no-unknown": [
-      true,
-      {
-        "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "variants",
-          "responsive",
-          "screen"
-        ]
-      }
-    ]
+    "selector-id-pattern": null,
+    "selector-class-pattern": null
   }
 }

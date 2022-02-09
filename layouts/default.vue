@@ -22,8 +22,7 @@ html {
   font-size: 16px;
   background: #e83162;
   word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -54,8 +53,8 @@ section {
   }
 }
 
-.button--primary,
-.button--secondary {
+.button-primary,
+.button-secondary {
   font-size: 16px;
   cursor: pointer;
   background: none;
@@ -63,7 +62,7 @@ section {
   appearance: none;
 }
 
-.button--primary {
+.button-primary {
   display: inline-block;
   padding: 10px 30px;
   color: #e83162;
@@ -77,7 +76,7 @@ section {
   }
 }
 
-.button--secondary {
+.button-secondary {
   display: inline-block;
   padding: 10px 30px;
   margin-left: 15px;

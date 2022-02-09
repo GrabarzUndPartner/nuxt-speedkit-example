@@ -18,7 +18,7 @@
           slow connection
         </li>
       </ul>
-      <div class="info-layer__buttons">
+      <div class="info-layer-buttons">
         <button id="nuxt-speedkit__button__init-nojs" class="button--primary">
           <label for="nuxt-speedkit__speedkit-layer__close">
             Continue without Javascript, but with activated fonts.
@@ -70,7 +70,7 @@ export default {
   z-index: 1000;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: rgb(0 0 0 / 40%);
   opacity: 0;
   animation-name: fade-in;
   animation-duration: 0.2s;
@@ -99,7 +99,7 @@ export default {
   }
 }
 
-.info_layer {
+.info-layer {
   & label {
     cursor: pointer;
   }
@@ -114,7 +114,7 @@ export default {
   }
 }
 
-.info-layer__buttons {
+.info-layer-buttons {
   margin: calc(10 / 16 * 1em) 0;
 
   & > * {

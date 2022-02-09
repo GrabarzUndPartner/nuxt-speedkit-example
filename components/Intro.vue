@@ -33,7 +33,7 @@
         href="https://nuxt-speedkit.grabarzundpartner.dev/"
         target="_blank"
         rel="noopener noreferrer"
-        class="button--primary"
+        class="button-primary"
         title="Documentation"
       >
         Documentation
@@ -42,7 +42,7 @@
         href="https://github.com/GrabarzUndPartner/nuxt-speedkit"
         target="_blank"
         rel="noopener noreferrer"
-        class="button--secondary"
+        class="button-secondary"
         title="GitHub (Nuxt Speedkit)"
       >
         GitHub (Nuxt Speedkit)
@@ -51,7 +51,7 @@
         href="https://github.com/GrabarzUndPartner/nuxt-speedkit-example"
         target="_blank"
         rel="noopener noreferrer"
-        class="button--secondary"
+        class="button-secondary"
         title="GitHub (Example)"
       >
         GitHub (Example)
