@@ -12,16 +12,16 @@
 
 <script>
 
-import speedkitLoader from 'nuxt-speedkit/loader';
+import speedkitHydrate from 'nuxt-speedkit/hydrate';
 
 export default {
   // import components: https://nuxt-speedkit.grabarzundpartner.dev/usage#import-components
   components: {
-    Intro: speedkitLoader(() => import('@/components/Intro')),
-    DirectiveVFontA: speedkitLoader(() => import('@/components/DirectiveVFontA')),
-    DirectiveVFontB: speedkitLoader(() => import('@/components/DirectiveVFontB')),
-    SpeedkitPicture: speedkitLoader(() => import('@/components/SpeedkitPicture')),
-    SpeedkitIframe: speedkitLoader(() => import('@/components/SpeedkitIframe'))
+    Intro: speedkitHydrate(() => import('@/components/Intro')),
+    DirectiveVFontA: speedkitHydrate(() => import('@/components/DirectiveVFontA')),
+    DirectiveVFontB: speedkitHydrate(() => import('@/components/DirectiveVFontB')),
+    SpeedkitPicture: speedkitHydrate(() => import('@/components/SpeedkitPicture')),
+    SpeedkitIframe: speedkitHydrate(() => import('@/components/SpeedkitIframe'))
   },
   data () {
     return {

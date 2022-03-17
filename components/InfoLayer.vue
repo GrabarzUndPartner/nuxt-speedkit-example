@@ -52,12 +52,12 @@ export default {
     };
   },
   head () {
-    return {
+    return this.$speedkit.head({
       noscript: [
         getStyleDescription('#nuxt-speedkit-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-speedkit-layer-content > div { animation-delay: initial !important; }', true)
       ],
       __dangerouslyDisableSanitizers: ['noscript']
-    };
+    });
   }
 };
 </script>
