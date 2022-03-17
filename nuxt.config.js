@@ -14,8 +14,7 @@ export default {
 
     postcss: {
       plugins: {
-        'postcss-nesting': {},
-        'postcss-object-fit-images': {}
+        'postcss-nesting': {}
       }
     }
 
@@ -28,10 +27,6 @@ export default {
   router: {
     base: getBasePath()
   },
-
-  plugins: [
-    { src: '@/plugins/polyfills.js', mode: 'client' }
-  ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
