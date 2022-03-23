@@ -7,12 +7,16 @@
 <script>
 
 import SpeedkitPicture from 'nuxt-speedkit/components/SpeedkitPicture';
+import objectFitImages from 'object-fit-images';
 
 export default {
   components: {
     SpeedkitPicture
   },
-  inheritAttrs: false
+  inheritAttrs: false,
+  mounted () {
+    objectFitImages();
+  }
 };
 
 </script>
