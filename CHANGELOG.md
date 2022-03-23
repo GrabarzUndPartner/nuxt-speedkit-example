@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.8](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.7...v1.0.8) (2022-03-23)
+
+
+### Bug Fixes
+
+* **polyfill:** add polyfills for outdated browsers ([41e71a5](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/41e71a5a5e6365c716afa443bca4906011a7cf54))
+
 ## [1.0.7](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.6...v1.0.7) (2022-03-17)
 
 
