@@ -15,8 +15,12 @@
   },
   "dependencies": {
     "core-js": "3.21.1",
+    "intersection-observer": "^0.12.0",
     "nuxt": "2.15.8",
-    "nuxt-speedkit": "2.0.1"
+    "nuxt-speedkit": "2.0.1",
+    "object-fit-images": "^3.2.4",
+    "picturefill": "^3.0.3",
+    "postcss-object-fit-images": "^1.1.2"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.17.0",

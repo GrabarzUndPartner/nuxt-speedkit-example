@@ -10,11 +10,13 @@ export default {
   },
 
   build: {
+
     transpile: ['@nuxt/image', 'image-meta'],
 
     postcss: {
       plugins: {
-        'postcss-nesting': {}
+        'postcss-nesting': {},
+        'postcss-object-fit-images': {}
       }
     }
 
@@ -27,6 +29,10 @@ export default {
   router: {
     base: getBasePath()
   },
+
+  plugins: [
+    { src: '@/plugins/polyfills.js', mode: 'client' }
+  ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
