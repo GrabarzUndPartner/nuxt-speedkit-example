@@ -4,6 +4,7 @@ This is an example project for using [Nuxt Speedkit](https://github.com/GrabarzU
 
 - [👁 &nbsp;&nbsp;**Preview**](https://grabarzundpartner.github.io/nuxt-speedkit-example/)
 - [📖 &nbsp;&nbsp;**Documentation**](http://nuxt-speedkit.grabarzundpartner.dev/)
+- [🪄 &nbsp;&nbsp;**Sandbox**](https://codesandbox.io/s/github/GrabarzUndPartner/nuxt-speedkit-example/tree/main/)
 
 ## Build Setup
 
