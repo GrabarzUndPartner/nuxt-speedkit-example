@@ -32,9 +32,6 @@
  */
 
 
-/*! npm.im/object-fit-images 3.2.4 */
-
-
 /*!
  * The buffer module from node.js, for the browser.
  *
@@ -55,3 +52,6 @@
  */
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
+
+
+/*! npm.im/object-fit-images 3.2.4 */
