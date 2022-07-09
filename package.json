@@ -14,7 +14,7 @@
     "lint:css": "stylelint \"**/*.vue\""
   },
   "dependencies": {
-    "core-js": "3.23.3",
+    "core-js": "3.23.4",
     "intersection-observer": "0.12.2",
     "nuxt": "2.15.8",
     "nuxt-speedkit": "2.0.14",
@@ -32,10 +32,10 @@
     "@nuxtjs/stylelint-module": "4.1.0",
     "eslint": "8.19.0",
     "eslint-plugin-nuxt": "3.2.0",
-    "eslint-plugin-vue": "9.1.1",
+    "eslint-plugin-vue": "9.2.0",
     "husky": "8.0.1",
     "lint-staged": "12.5.0",
-    "postcss-html": "1.4.1",
+    "postcss-html": "1.5.0",
     "stylelint": "14.9.1",
     "stylelint-config-recess-order": "3.0.0",
     "stylelint-config-standard": "25.0.0"
