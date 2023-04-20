@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.10](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.9...v1.0.10) (2023-04-20)
+
+
+### Bug Fixes
+
+* **update:** update project ([3f2bbbf](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/commit/3f2bbbf8b1a20df7df3c1282ed04400fef74cbc2))
+
 ## [1.0.9](https://github.com/GrabarzUndPartner/nuxt-speedkit-example/compare/v1.0.8...v1.0.9) (2022-03-31)
 
 
