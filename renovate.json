@@ -16,9 +16,6 @@
       "matchUpdateTypes": [
         "major"
       ],
-      "matchBaseBranches": [
-        "stable"
-      ],
       "enabled": false
     }
   ],
