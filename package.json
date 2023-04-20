@@ -16,7 +16,7 @@
   "dependencies": {
     "core-js": "3.30.1",
     "intersection-observer": "0.12.2",
-    "nuxt": "2.16.3",
+    "nuxt": "3.4.2",
     "nuxt-speedkit": "2.1.7",
     "object-fit-images": "3.2.4",
     "picturefill": "3.0.3",
