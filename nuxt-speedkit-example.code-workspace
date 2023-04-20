@@ -2,12 +2,15 @@
   "folders": [
     {
       "path": "."
+    },
+    {
+      "path": "./node_modules/nuxt-speedkit"
     }
   ],
   "settings": {
     "breadcrumbs.enabled": true,
+    "editor.bracketPairColorization.enabled": true,
     "editor.cursorBlinking": "phase",
-    "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.maxColumn": 200,
@@ -16,12 +19,17 @@
     "editor.codeActionsOnSave": {
       "source.fixAll": true
     },
-    "eslint.alwaysShowStatus": true,
     "eslint.validate": [
       "javascript",
       "javascriptreact",
       "vue",
       "html"
+    ],
+    "stylelint.validate": [
+      "css",
+      "less",
+      "postcss",
+      "vue"
     ],
     "files.exclude": {
       "docs/": true,

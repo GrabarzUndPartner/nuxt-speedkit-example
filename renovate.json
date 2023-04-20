@@ -2,6 +2,26 @@
   "extends": [
     "@nuxtjs"
   ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "@nuxtjs/eslint-config",
+        "@nuxtjs/eslint-config-typescript",
+        "@nuxtjs/eslint-module",
+        "@nuxtjs/stylelint-module",
+        "nuxt",
+        "eslint",
+        "stylelint"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "matchBaseBranches": [
+        "stable"
+      ],
+      "enabled": false
+    }
+  ],
   "baseBranches": [
     "main"
   ],

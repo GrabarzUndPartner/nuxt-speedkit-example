@@ -17,15 +17,18 @@
         <li id="nuxt-speedkit-message-slow-connection">
           slow connection
         </li>
+        <li id="nuxt-speedkit-message-reduced-bandwidth">
+          slow connection
+        </li>
       </ul>
       <div class="info-layer-buttons">
         <button id="nuxt-speedkit-button-init-nojs" class="button-primary">
-          <label for="nuxt-speedkit-speedkit-layer-close">
+          <label for="nuxt-speedkit-layer-close">
             Continue without Javascript, but with activated fonts.
           </label>
         </button>
         <button id="nuxt-speedkit-button-init-font" class="button-secondary" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
-          <label for="nuxt-speedkit-speedkit-layer-close">
+          <label for="nuxt-speedkit-layer-close">
             Continue only with fonts
           </label>
         </button>
@@ -54,7 +57,7 @@ export default {
   head () {
     return this.$speedkit.head({
       noscript: [
-        getStyleDescription('#nuxt-speedkit-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-speedkit-layer-content > div { animation-delay: initial !important; }', true)
+        getStyleDescription('#nuxt-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-layer-content > div { animation-delay: initial !important; }', true)
       ],
       __dangerouslyDisableSanitizers: ['noscript']
     });
@@ -63,7 +66,7 @@ export default {
 </script>
 
 <style lang="postcss">
-#nuxt-speedkit-speedkit-layer-content {
+#nuxt-speedkit-layer-content {
   position: fixed;
   top: 0;
   left: 0;
@@ -92,7 +95,7 @@ export default {
   }
 }
 
-.nuxt-speedkit-speedkit-layer-visible #nuxt-speedkit-speedkit-layer-content {
+.nuxt-speedkit-layer-visible #nuxt-speedkit-layer-content {
   &,
   & > div {
     animation-delay: initial;
