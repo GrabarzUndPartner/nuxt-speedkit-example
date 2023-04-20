@@ -1,0 +1,22 @@
+{
+  "vueCompilerOptions": {
+    "target": 2.7
+  },
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "playground/*"
+      ],
+      "@@/*": [
+        "./*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

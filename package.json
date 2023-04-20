@@ -14,30 +14,30 @@
     "lint:css": "stylelint \"**/*.vue\""
   },
   "dependencies": {
-    "core-js": "3.24.0",
+    "core-js": "3.30.1",
     "intersection-observer": "0.12.2",
-    "nuxt": "2.15.8",
-    "nuxt-speedkit": "2.0.17",
+    "nuxt": "^2.16.3",
+    "nuxt-speedkit": "^2.1.7",
     "object-fit-images": "3.2.4",
     "picturefill": "3.0.3",
     "postcss-object-fit-images": "1.1.2"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.18.9",
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "17.0.3",
-    "@nuxt/postcss8": "1.1.3",
-    "@nuxtjs/eslint-config": "10.0.0",
-    "@nuxtjs/eslint-module": "3.1.0",
+    "@babel/eslint-parser": "7.21.3",
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
+    "@nuxtjs/eslint-config": "12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/stylelint-module": "4.1.0",
-    "eslint": "8.20.0",
-    "eslint-plugin-nuxt": "3.2.0",
-    "eslint-plugin-vue": "9.2.0",
-    "husky": "8.0.1",
-    "lint-staged": "13.0.3",
+    "eslint": "8.38.0",
+    "eslint-plugin-nuxt": "4.0.0",
+    "eslint-plugin-vue": "9.11.0",
+    "husky": "8.0.3",
+    "lint-staged": "13.2.1",
     "postcss-html": "1.5.0",
-    "stylelint": "14.9.1",
-    "stylelint-config-recess-order": "3.0.0",
-    "stylelint-config-standard": "26.0.0"
+    "stylelint": "14.16.1",
+    "stylelint-config-recess-order": "3.1.0",
+    "stylelint-config-standard": "29.0.0"
   }
 }

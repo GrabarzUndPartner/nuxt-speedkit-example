@@ -1,7 +1,9 @@
 import pkg from './package.json';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
+
   target: 'static',
 
   server: {
@@ -9,17 +11,19 @@ export default {
     port: getPort()
   },
 
-  build: {
-
-    transpile: ['@nuxt/image', 'image-meta'],
-
-    postcss: {
+  postcss: {
+    postcssOptions: {
       plugins: {
-        'postcss-nesting': {},
+        'postcss-preset-env': {
+          preserve: true,
+          stage: 0,
+          features: {
+            'nesting-rules': true
+          }
+        },
         'postcss-object-fit-images': {}
       }
     }
-
   },
 
   generate: {
@@ -34,7 +38,6 @@ export default {
     { src: '@/plugins/polyfills.js', mode: 'client' }
   ],
 
-  // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: pkg.name,
     htmlAttrs: {
@@ -192,9 +195,11 @@ export default {
   },
 
   buildModules: [
-    '@nuxt/postcss8',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/stylelint-module'
+    ...(isDev
+      ? [
+          '@nuxtjs/eslint-module',
+          '@nuxtjs/stylelint-module']
+      : [])
   ],
 
   modules: [
