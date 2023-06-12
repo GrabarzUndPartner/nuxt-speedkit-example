@@ -1,25 +1,17 @@
 <template>
   <speedkit-layer class="info-layer">
-    <div v-font="[$getFont('Quicksand'), $getFont('Quicksand', 400, 'normal', {selector: 'button'})]">
-      <p>
-        Sorry, but you will have a limited user experience due to a…
-      </p>
+    <div
+      v-font="[
+        $getFont('Quicksand'),
+        $getFont('Quicksand', 400, 'normal', { selector: 'button' })
+      ]">
+      <p>Sorry, but you will have a limited user experience due to a…</p>
       <ul v-font="$getFont('Quicksand', 700, 'normal')">
-        <li id="nuxt-speedkit-message-nojs">
-          disabled javascript
-        </li>
-        <li id="nuxt-speedkit-message-unsupported-browser">
-          outdated browser
-        </li>
-        <li id="nuxt-speedkit-message-outdated-device">
-          outdated device
-        </li>
-        <li id="nuxt-speedkit-message-slow-connection">
-          slow connection
-        </li>
-        <li id="nuxt-speedkit-message-reduced-bandwidth">
-          slow connection
-        </li>
+        <li id="nuxt-speedkit-message-nojs">disabled javascript</li>
+        <li id="nuxt-speedkit-message-unsupported-browser">outdated browser</li>
+        <li id="nuxt-speedkit-message-outdated-device">outdated device</li>
+        <li id="nuxt-speedkit-message-slow-connection">slow connection</li>
+        <li id="nuxt-speedkit-message-reduced-bandwidth">slow connection</li>
       </ul>
       <div class="info-layer-buttons">
         <button id="nuxt-speedkit-button-init-nojs" class="button-primary">
@@ -27,12 +19,18 @@
             Continue without Javascript, but with activated fonts.
           </label>
         </button>
-        <button id="nuxt-speedkit-button-init-font" class="button-secondary" onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
+        <button
+          id="nuxt-speedkit-button-init-font"
+          class="button-secondary"
+          onclick="window.__NUXT_SPEEDKIT_FONT_INIT__ = true;">
           <label for="nuxt-speedkit-layer-close">
             Continue only with fonts
           </label>
         </button>
-        <button id="nuxt-speedkit-button-init-app" class="button-primary" onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
+        <button
+          id="nuxt-speedkit-button-init-app"
+          class="button-primary"
+          onclick="window.__NUXT_SPEEDKIT_AUTO_INIT__ = true;">
           Continue with fully working app
         </button>
       </div>
@@ -40,29 +38,20 @@
   </speedkit-layer>
 </template>
 
-<script>
+<script setup>
+import useFonts from '#speedkit/composables/fonts';
+import SpeedkitLayer from '#speedkit/components/SpeedkitLayer';
+import { getStyleDescription } from '#speedkit/utils/description';
+const { $getFont } = useFonts();
 
-import SpeedkitLayer from 'nuxt-speedkit/components/SpeedkitLayer';
-import { getStyleDescription } from 'nuxt-speedkit/utils/description';
-
-export default {
-  components: {
-    SpeedkitLayer
-  },
-  data () {
-    return {
-      hydrate: false
-    };
-  },
-  head () {
-    return this.$speedkit.head({
-      noscript: [
-        getStyleDescription('#nuxt-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-layer-content > div { animation-delay: initial !important; }', true)
-      ],
-      __dangerouslyDisableSanitizers: ['noscript']
-    });
-  }
-};
+useHead({
+  noscript: [
+    getStyleDescription(
+      '#nuxt-speedkit-layer-content { animation-delay: initial !important; } #nuxt-speedkit-layer-content > div { animation-delay: initial !important; }',
+      true
+    )
+  ]
+});
 </script>
 
 <style lang="postcss">
@@ -144,5 +133,4 @@ export default {
     transform: translateY(0%);
   }
 }
-
 </style>

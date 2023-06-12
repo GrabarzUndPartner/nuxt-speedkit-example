@@ -88,15 +88,14 @@ jobs:
       - name: Build
         run: |
           npm run generate
-          touch dist/.nojekyll
+          touch .output/public/.nojekyll
         env:
-          BASE_PATH: /nuxt-speedkit-example/
-          DIST_PATH: dist
+          BASE_URL: /nuxt-speedkit-example/
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: buildArtifact
-          path: dist
+          path: .output/public
 
   deploy-ghpages:
     name: Deploy (GH-Pages)

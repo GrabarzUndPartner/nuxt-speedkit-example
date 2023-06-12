@@ -7,14 +7,55 @@
   },
   "extends": [
     "@nuxtjs",
-    "plugin:nuxt/recommended"
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:security/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:no-unsanitized/DOM",
+    "plugin:jsonc/recommended-with-json",
+    "prettier"
   ],
-  "plugins": [],
+  "overrides": [
+    {
+      "files": [
+        "*.code-workspace",
+        "*.json",
+        "*.json5",
+        "*.jsonc"
+      ],
+      "parser": "jsonc-eslint-parser"
+    }
+  ],
+  "plugins": [
+    "no-secrets",
+    "xss",
+    "prettier"
+  ],
   "rules": {
-    "vue/multi-word-component-names": "off",
     "semi": [
       2,
       "always"
-    ]
+    ],
+    "prettier/prettier": "error",
+    "no-secrets/no-secrets": [
+      "error"
+    ],
+    "xss/no-location-href-assign": 2,
+    "xss/no-mixed-html": 0,
+    "vue/no-v-html": "off",
+    "vue/component-definition-name-casing": [
+      "error",
+      "PascalCase"
+    ],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "kebab-case",
+      {
+        "registeredComponentsOnly": true,
+        "ignores": []
+      }
+    ],
+    "sonarjs/no-duplicate-string": 0,
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/no-unused-vars": "off"
   }
 }

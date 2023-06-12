@@ -1,24 +1,15 @@
 <template>
   <section id="speedkit-picture" class="speedkit-picture">
-    <SpeedkitPicture v-bind="$attrs" class="picture" v-on="$listeners" />
+    <speedkit-picture v-bind="$attrs" class="picture" />
   </section>
 </template>
 
-<script>
+<script setup>
+import SpeedkitPicture from '#speedkit/components/SpeedkitPicture';
 
-import SpeedkitPicture from 'nuxt-speedkit/components/SpeedkitPicture';
-import objectFitImages from 'object-fit-images';
-
-export default {
-  components: {
-    SpeedkitPicture
-  },
-  inheritAttrs: false,
-  mounted () {
-    objectFitImages();
-  }
-};
-
+defineOptions({
+  inheritAttrs: false
+});
 </script>
 
 <style lang="postcss" scoped>
@@ -32,12 +23,11 @@ export default {
     width: 100%;
     height: 100%;
 
-    & >>> img {
+    & :deep(img) {
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
 }
-
 </style>
