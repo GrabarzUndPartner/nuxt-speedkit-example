@@ -63,11 +63,11 @@ useHead({
   width: 100%;
   height: 100%;
   background-color: rgb(0 0 0 / 40%);
+  backdrop-filter: blur(calc(7 / 16 * 1em));
   opacity: 0;
   animation-name: fade-in;
   animation-duration: 0.2s;
   animation-delay: 4s;
-  backdrop-filter: blur(calc(7 / 16 * 1em));
   animation-fill-mode: forwards;
 
   & > div {
