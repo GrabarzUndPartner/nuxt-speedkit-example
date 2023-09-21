@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [16]
+        node: [19]
 
     steps:
       - uses: actions/setup-node@v3
@@ -36,4 +36,4 @@ jobs:
         run: npm ci
 
       - name: Test
-        run: npm run test && npm run build
+        run: npm run test

@@ -78,7 +78,6 @@ section {
 .button-secondary {
   display: inline-block;
   padding: 10px 30px;
-  margin-left: 15px;
   color: #e83162;
   text-decoration: none;
   border: 1px solid #e83162;

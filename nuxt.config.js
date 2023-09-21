@@ -305,11 +305,6 @@ export default defineNuxtConfig(async () => {
       ]
     },
 
-    buildModules: [
-      isDev && '@nuxtjs/eslint-module',
-      isDev && '@nuxtjs/stylelint-module'
-    ].filter(Boolean),
-
     modules: ['nuxt-speedkit']
   };
 });

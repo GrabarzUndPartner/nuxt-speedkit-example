@@ -149,6 +149,7 @@ const anchors = [
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   color: #2f495e;
@@ -176,9 +177,12 @@ const anchors = [
   }
 }
 
-.links > * {
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  margin: 5px 0;
+  max-width: 360px;
 }
 
 p {
@@ -186,26 +190,27 @@ p {
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 0;
-  margin: 20px 0;
-  margin-bottom: 15px;
   list-style: none;
 
+  & li {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    font-size: 18px;
+    list-style: none;
+  }
+
   & a {
-    margin: 20px 0;
     color: #2f495e;
     text-decoration: none;
 
     &:hover {
       color: #e83162;
     }
-  }
-
-  & li {
-    padding: 0;
-    margin: 10px 0;
-    font-size: 18px;
-    list-style: none;
   }
 }
 
