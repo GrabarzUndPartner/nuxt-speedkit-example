@@ -24,9 +24,9 @@ defineOptions({
     height: 100%;
 
     & :deep(img) {
-      object-fit: cover;
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 }

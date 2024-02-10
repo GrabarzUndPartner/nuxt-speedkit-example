@@ -1,11 +1,11 @@
 import { defineNuxtConfig } from 'nuxt/config';
 import { readPackage } from 'read-pkg';
 
-const isDev = process.env.NODE_ENV === 'development';
-
 export default defineNuxtConfig(async () => {
   const { name: pkgName } = await readPackage();
   return {
+    dev: process.env.NODE_ENV === 'development',
+
     ssr: true,
 
     srcDir: 'src',

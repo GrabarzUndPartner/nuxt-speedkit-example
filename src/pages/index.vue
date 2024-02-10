@@ -17,14 +17,14 @@ export default {
   // import components: https://nuxt-speedkit.grabarzundpartner.dev/usage#import-components
   components: {
     Intro: speedkitHydrate(() => import('@/components/Intro')),
-    DirectiveVFontA: speedkitHydrate(() =>
-      import('@/components/DirectiveVFontA')
+    DirectiveVFontA: speedkitHydrate(
+      () => import('@/components/DirectiveVFontA')
     ),
-    DirectiveVFontB: speedkitHydrate(() =>
-      import('@/components/DirectiveVFontB')
+    DirectiveVFontB: speedkitHydrate(
+      () => import('@/components/DirectiveVFontB')
     ),
-    SpeedkitPicture: speedkitHydrate(() =>
-      import('@/components/SpeedkitPicture')
+    SpeedkitPicture: speedkitHydrate(
+      () => import('@/components/SpeedkitPicture')
     ),
     SpeedkitIframe: speedkitHydrate(() => import('@/components/SpeedkitIframe'))
   },
