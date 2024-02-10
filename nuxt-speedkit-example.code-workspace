@@ -2,9 +2,6 @@
   "folders": [
     {
       "path": "."
-    },
-    {
-      "path": "./node_modules/nuxt-speedkit"
     }
   ],
   "settings": {
@@ -17,7 +14,7 @@
     "editor.minimap.showSlider": "always",
     "editor.smoothScrolling": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     },
     "eslint.validate": [
       "javascript",

@@ -6,14 +6,14 @@ on:
 
 jobs:
   install:
-    if: "!contains(github.event.head_commit.message, 'skip ci')"
+    if: contains(github.event.head_commit.message, 'skip ci') == false
     name: Install
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [18]
+        node: [19]
 
     steps:
       - uses: actions/setup-node@v3
@@ -27,14 +27,12 @@ jobs:
         with:
           path: |
             node_modules
-            ~/.cache/ms-playwright/
-            ~\AppData\Local\ms-playwright\
           key: ${{ matrix.os }}-node-v${{ matrix.node }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/package-lock.json')) }}
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
       - name: Test
-        run: npm run test && npm run build
+        run: npm run test
 
   semantic-version:
     name: Semantic Release
@@ -44,7 +42,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [18]
+        node: [19]
 
     steps:
       - uses: actions/setup-node@v3
@@ -68,7 +66,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [18]
+        node: [19]
 
     steps:
       - uses: actions/setup-node@v3
@@ -88,15 +86,14 @@ jobs:
       - name: Build
         run: |
           npm run generate
-          touch dist/.nojekyll
+          touch .output/public/.nojekyll
         env:
-          BASE_PATH: /nuxt-speedkit-example/
-          DIST_PATH: dist
+          BASE_URL: /nuxt-speedkit-example/
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
           name: buildArtifact
-          path: dist
+          path: .output/public
 
   deploy-ghpages:
     name: Deploy (GH-Pages)
@@ -105,7 +102,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [18]
+        node: [19]
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@master

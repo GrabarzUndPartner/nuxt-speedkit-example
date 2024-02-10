@@ -1,13 +1,12 @@
 <template>
   <div>
-    <Nuxt />
+    <slot />
     <!-- critical prop for critical components: https://nuxt-speedkit.grabarzundpartner.dev/usage#critical-prop-for-critical-components -->
-    <InfoLayer critical />
+    <info-layer critical />
   </div>
 </template>
 
 <script>
-
 // Usage SpeedkitLayer: https://nuxt-speedkit.grabarzundpartner.dev/components/speedkit-layer
 import InfoLayer from '@/components/InfoLayer';
 
@@ -56,10 +55,10 @@ section {
 .button-primary,
 .button-secondary {
   font-size: 16px;
+  appearance: none;
   cursor: pointer;
   background: none;
   border: none;
-  appearance: none;
 }
 
 .button-primary {
@@ -79,7 +78,6 @@ section {
 .button-secondary {
   display: inline-block;
   padding: 10px 30px;
-  margin-left: 15px;
   color: #e83162;
   text-decoration: none;
   border: 1px solid #e83162;
@@ -94,5 +92,4 @@ section {
 a {
   color: #e83162;
 }
-
 </style>
